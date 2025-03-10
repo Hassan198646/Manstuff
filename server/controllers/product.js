@@ -1,6 +1,6 @@
 import Product from "../models/Product.js";
 
-const productController = {
+const product = {
 
     getAllProducts: async (req, res) => {
         try {
@@ -71,4 +71,4 @@ const productController = {
     }
 };
 
-export default productController;
+export default product

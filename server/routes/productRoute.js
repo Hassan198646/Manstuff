@@ -1,14 +1,14 @@
 import express from "express";
-import productController from "../controllers/productController.js";
+import product from "../controllers/product.js";
 import uploads from "../CloudinaryConfig.js";
 
 
 const router = express.Router();
-router.get('/products', productController.getAllProducts);
-router.get('/products/:id', productController.getProductById);
-router.post('/products',uploads.single("image"), productController.createProduct);
-router.put('/products/:id',uploads.single("image"),productController.updateProduct);
-router.delete('/products/:id',productController.deleteProduct);
+router.get('/products', product.getAllProducts);
+router.get('/products/:id', product.getProductById);
+router.post('/products',uploads.single("image"), product.createProduct);
+router.put('/products/:id',uploads.single("image"),product.updateProduct);
+router.delete('/products/:id',product.deleteProduct);
 
 
 
